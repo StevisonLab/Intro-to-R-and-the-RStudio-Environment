@@ -20,8 +20,8 @@ Core competencies covered: Students should be able to gather and evaluate experi
 
 As part of this exercise, students will output a PNG image file of their subsetted contig and customize it using the plot function in R. An example output is provided in Figure 1. This plot and the code used to generate it are provided in the handout review slides and sample code below. 
 
-![**Figure 1.** Sample output from student handout. Coverage along the subsetted contig “chr4_group5” on chromosome 4 of D. pseudoobscura. 
-](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
+![](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
+>**Figure 1.** Sample output from student handout. Coverage along the subsetted contig "chr4_group5" on chromosome 4 of *D. pseudoobscura*.
 
 Additionally, students will generate an RScript that can be used to compute coverage along a contig. Below is a sample coverage.R script the students should have completed by end of exercise is provided below. Each step on the handout is labeled as comments. This code can be copied directly into an R console and run to test the exercise and expected outputs. The first step must be replaced with the actual path to the provided input file on the student or instructor’s computer. See provided student handout for additional details.
 
