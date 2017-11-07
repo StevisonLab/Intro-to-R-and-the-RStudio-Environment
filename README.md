@@ -86,9 +86,15 @@ Finally, the html slides provided include a handout review (see contents to jump
 
 ##References:
 >Li, H., and R. Durbin, 2009 Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics 25: 1754-1760.
+
 >Li, H., B. Handsaker, A. Wysoker, T. Fennell, J. Ruan et al., 2009 The Sequence Alignment/Map format and SAMtools. Bioinformatics 25: 2078-2079.
+
 >McGaugh, S. E., and M. A. Noor, 2012 Genomic impacts of chromosomal inversions in parapatric Drosophila species. Philos Trans R Soc Lond B Biol Sci 367: 422-429.
+
 >R Core Team, 2016 R: A language and environment for statistical computing, pp.  in R Foundation for Statistical Computing.
+
 >R Studio Team, 2016 RStudio: Integrated Development for R, pp. RStudio, Inc., Boston, MA.
+
 >Richards, S., Y. Liu, B. R. Bettencourt, P. Hradecky, S. Letovsky et al., 2005 Comparative genome sequencing of Drosophila pseudoobscura: Chromosomal, gene, and cis-element evolution. Genome Research 15: 1-18.
+
 >Sims, D., I. Sudbery, N. E. Ilott, A. Heger and C. P. Ponting, 2014 Sequencing depth and coverage: key considerations in genomic analyses. Nat Rev Genet 15: 121-132.
