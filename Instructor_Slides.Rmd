@@ -1,0 +1,208 @@
+---
+title: "Working in RStudio - Introduction"
+author: "Laurie Stevison"
+output:
+  slidy_presentation:
+    incremental: no
+---
+
+##Installation of R and Rstudio
+
+First, install R:
+![https://www.r-project.org](images/Picture1.png)
+
+##Rstudio environment for R and Applications
+
+Next, install RStudio:
+
+![https://www.rstudio.com](images/Picture2.png)
+
+
+##Launch RStudio:
+![](images/Picture4.png)
+
+##Help in RStudio
+![](images/Picture5.png)
+
+##Similarities between R and command line
+
+* Most keyboard shortcuts are the same
+* History saved in a hidden file “.Rdata”
+* Can use tab to complete filenames and variables
+* Can assign variables using multiple syntaxes:
+    + a=seq(0,100,5)					 
+    + a<-seq(0,100,5)
+* Can do loops and if statements
+* Kill runaway job using stop sign, like Cntrl + C
+
+![](images/Picture3.png)
+
+##Today's Exercise: Calculating Coverage Along a Chromosome
+
+* In genome analysis, the most often asked question by researchers is:
+    + How many reads cover each site in the genome?
+* Coverage (or depth) is calculated as read length (L) times the number of reads (N) divided by the genome size (G). 
+    + $C=\frac{N*L}{G}$
+
+![Image source: By Genomics Education Programme - Read, read length and read depth - read depth of ‘4’, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=58405954](images/Picture6.jpg)
+
+##Using samtools to get read depth output:
+
+* A commonly used bioinformatics software for analyzing genome sequence alignment files (bam format) is [samtools](http://www.htslib.org/).
+* Specifically, we have used `samtools depth` to output this information in long form.
+* Because the output is so large, we will use R to read in the output and understand it.
+* Today's dataset was aligned to the *Drosophila pseudoobscura* reference genome.
+    + Specifically, you have been provided reads aligned to the genome, with the first 50 kilobases of each contig on the 4th chromosome subsetted.
+    + The raw sequences used to make this file are from a [published study](http://dx.doi.org/10.1098%2Frstb.2011.0250), which is archived in [NCBI's short read archive](https://www.ncbi.nlm.nih.gov/sra/) (SRP007802).
+
+
+![`samtools depth options`](images/Picture7.png)
+
+##What you will be doing today:
+
+* First, you will read the `samtools depth` output into R
+* You will learn to manipulate data in R and make subsets
+* You will calculate basic summary statistics of coverage
+* You will examine the coverage information visually using a histogram
+* Finally, you will plot coverage along a single chromosome
+
+##Reproducibility and bioinformatics
+
+* During today's exercise, you will create a script to automate each step in your handout
+* This script will enable you to re-do this analysis anytime in the future
+* More importantly, you can change the input and use this script on any data file similar to the input provided
+* Automating this process via a script means your results are directly comparable because the methods are identical
+* Being able to get the same results every time is the definition of [reproducibility](https://en.wikipedia.org/wiki/Reproducibility) and is fundamental to the validity of bioinformatics research
+
+
+##Let's get started!
+
+* Refer to the instructions on your handout.
+* Work with others at your table.
+* If you finish early, help others.
+* If you are having trouble, ask for help.
+
+##Handout Review
+
+##Steps 1-3: Download and unzip input file provided.
+
+* Make a folder for this exercise.
+* Set the working directory to that folder.
+* Open an RScript and save it as coverage.R.
+* Save the script as you go so you can re-run this exercise anytime you want!
+
+##Step 4a: read in data
+
+```{r 4a}
+samtools.depth=read.table(file="chr4.depth.out")
+#View(samtools.depth)
+```
+
+##Step 4b: test functions head, tail and length on your data frame.
+
+```{r 4b}
+head(samtools.depth)
+tail(samtools.depth)
+length(samtools.depth)
+```
+
+Were you surprised by the output of length? 
+
+##Step 4c: redo length calculation on vector `V1`:
+
+```{r 4c}
+length(samtools.depth$V1)
+```
+
+Each column in this file is a vector (default labeled `V1..V3`). By specifying a single vector within the data frame we get a length calculation that matches the environment tab information. 
+
+##Step 4d: make new variables/objects by extracting rows and columns in this dataset:
+
+```{r 4d}
+col3=samtools.depth[,3]
+row19=samtools.depth[19,]
+cell3_19=samtools.depth[19,3]
+```
+
+##Step4e: repeat `head`, `tail`, and `length` on the new objects:
+
+```{r 4e}
+head(col3)
+tail(row19)
+length(col3)
+```
+
+##Step 4f: Subset a single contig, `chr4_group5`:
+
+```{r 4f}
+chr4_group5=subset(samtools.depth,V1=="chr4_group5")
+```
+
+##Step 4g: Repeat on another contig:
+
+```{r 4g}
+#figure out the name of another contig:
+unique(samtools.depth$V1)
+
+#we've already subsetted chr4_group5, so let's subset chr4_group2:
+chr4_group2=subset(samtools.depth,V1=="chr4_group2")
+```
+
+##Step 5a & b: calculate mean and standard deviation for coverage:
+
+```{r 5}
+#mean
+mean(samtools.depth$V3)
+
+#sd
+sd(samtools.depth$V3)
+
+#5c: do this again on your subsetted contig:
+mean(chr4_group5$V3)
+sd(chr4_group5$V3)
+```
+
+What are some reasons you would expect coverage to be different in one contig or one region of a chromosome as compared to the whole genome?
+
+
+##Step 6a & b: make a histogram of both data frames:
+
+A histogram shows the frequency of each coverage level throughout our dataset.
+
+```{r 6ab}
+#full dataset
+hist(samtools.depth$V3)
+
+#subsetted contig only
+hist(chr4_group5$V3)
+```
+
+Again, what are some reasons you would expect the distribution of coverage to be different in one contig or one region of a contig as compared to the whole genome?
+
+
+##Step 6c: plot coverage along the contig:
+
+Read about the command plot in help and work to make your graph look nice by adding color, a title and names for the axes that are more informative than the defaults.
+
+```{r 6c}
+#use function plot:
+plot(chr4_group5$V2,chr4_group5$V3)
+
+#some steps to make it look nice:
+plot(chr4_group5$V2,chr4_group5$V3,xlab="Position",ylab="Depth of Coverage",main="chr4_group5 Coverage",type="l",lwd=3,col="blue")
+```
+
+Note I've added a title, labeled each axis and colored the line. What changes did each of you make?
+
+##Resources to continue learning R
+
+* Getting started in R: Excellent tutorial
+    + http://tryr.codeschool.com/
+* Web-based resources:
+    + http://www.statmethods.net/ (Comprehensive)
+    + http://www.harding.edu/fmccown/r/ (Graphs)
+* Books:
+    + Getting started with R: An introduction for Biologists
+    + R in Action: Data Analysis and Graphics in R
+    + Primer to Analysis of Genomic Data using R
+    + Graphical Data Analysis with R
