@@ -18,9 +18,13 @@ Specifically, the dataset used is mapped to the *Drosophila pseudoobscura* refer
 
 Students will learn to use RStudio and R to read in the sample dataset, perform basic functions like subsetting data and data manipulation. Students will finish by plotting the coverage along a chromosome. A [handout](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) is included to facilitate this process, with visuals for the students to follow along. Students are asked to install both R and RStudio on their individual computers prior to class (both softwares are free and cross platform compatible for PC, MAC, LINUX). Installation instructions are provided in [Appendix 1](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%201.%20Install%20R%20and%20RStudio%20Instruction.docx).
 
-### Justification: 
+### Core competencies: 
 
-Core competencies covered: Students should be able to gather and evaluate experimental evidence, including qualitative and quantitative data. Students should be able to apply statistical methods when analyzing their data, and use patterns to construct a model. Students should be able to generate and interpret graphs displaying experimental results. Students should be able to critique large data sets and use bioinformatics to assess genetics data. Students should be able to tap into the interdisciplinary nature of science.
+* Students should be able to gather and evaluate experimental evidence, including qualitative and quantitative data. 
+* Students should be able to apply statistical methods when analyzing their data, and use patterns to construct a model. 
+* Students should be able to generate and interpret graphs displaying experimental results. 
+* Students should be able to critique large data sets and use bioinformatics to assess genetics data. 
+* Students should be able to tap into the interdisciplinary nature of science.
 
 ### Sample/Example: 
 
@@ -29,7 +33,7 @@ As part of this exercise, students will output a PNG image file of their subsett
 ![](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
 >**Figure 1.** Sample output from student handout. Coverage along the subsetted contig "chr4_group5" on chromosome 4 of *D. pseudoobscura*.
 
-Additionally, students will generate an RScript that can be used to compute coverage along a contig. Below is a sample coverage.R script the students should have completed by end of exercise is provided below. Each step on the handout is labeled as comments. This code can be copied directly into an R console and run to test the exercise and expected outputs. The first step must be replaced with the actual path to the provided input file on the student or instructor’s computer. See provided student handout for additional details.
+Additionally, students will generate an ***RScript*** that can be used to compute coverage along a contig. Below is a sample `coverage.R` script the students should have completed by end of exercise is provided below. Each step on the handout is labeled as comments. This code can be copied directly into an R console and run to test the exercise and expected outputs. The first step must be replaced with the actual path to the provided input file on the student or instructor’s computer. See provided student handout for additional details.
 
 ```R
 #2: set working directory
@@ -81,7 +85,7 @@ plot(chr4_group5$V2,chr4_group5$V3)
 plot(chr4_group5$V2,chr4_group5$V3,xlab="Position",ylab="Depth of Coverage",main="chr4_group5 Coverage",type="l",lwd=3,col="blue") #see Figure 1 plot
 ```
 
-### Instructions to instructors/TAs:
+### Instructions to Instructors/TAs:
 
 It is very important to make sure students completed the installation of both softwares correctly prior to starting the exercise. Depending on the size of the group, the sites may take a while to download and install on site. As a backup, you may choose to get the installation for all platforms on a jump drive prior to class to pass around if necessary. 
 
