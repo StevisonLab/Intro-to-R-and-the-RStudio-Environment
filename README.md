@@ -1,4 +1,5 @@
 # Calculate coverage along a chromosome:  Introducing students to R and the R Studio environment
+[![DOI](https://zenodo.org/badge/109879615.svg)](https://zenodo.org/badge/latestdoi/109879615)
 
 ### Synopsis:
 This [laboratory exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) is provided to introduce intermediate undergraduate students to [R](https://www.r-project.org/) and the [RStudio](https://www.rstudio.com/) environment. At the end of this exercise, students should be able to:
