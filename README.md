@@ -1,7 +1,7 @@
 # Calculate coverage along a chromosome:  Introducing students to R and the R Studio environment
 
 ### Synopsis:
-This [laboratory exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf)) is provided to introduce intermediate undergraduate students to R and the RStudio environment. At the end of this exercise, students should be able to explain the concept of genome coverage, produce a quality plot of coverage along a chromosome and feel comfortable using and working in R and the RStudio environment. Students will also learn the importance of reproducibility in bioinformatics research and make a script that they can use afterwards. This resource includes a handout for students and accompanying slides for the instructor to use to preface the handout and to go over the handout after the lab activity.
+This [laboratory exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) is provided to introduce intermediate undergraduate students to R and the RStudio environment. At the end of this exercise, students should be able to explain the concept of genome coverage, produce a quality plot of coverage along a chromosome and feel comfortable using and working in R and the RStudio environment. Students will also learn the importance of reproducibility in bioinformatics research and make a script that they can use afterwards. This resource includes a handout for students and accompanying slides for the instructor to use to preface the handout and to go over the handout after the lab activity.
 
 ### Introduction: 
 R (R Core Team 2016) can be used for reading in data from other bioinformatics software, performing simple summary statistics, and plotting for the purposes of data exploration, presentations and ultimately, publication. Therefore, it is an essential tool for students to learn early in their education. RStudio (R Studio Team 2016) presents a clean interface for students to learn R in a comfortable environment. Here, I use the output of the commonly used bioinformatics software, samtools (Li et al. 2009), to assess coverage of a genomics sample (Sims et al. 2014). 
@@ -20,7 +20,8 @@ Core competencies covered: Students should be able to gather and evaluate experi
 
 As part of this exercise, students will output a PNG image file of their subsetted contig and customize it using the plot function in R. An example output is provided in Figure 1. This plot and the code used to generate it are provided in the handout review slides and sample code below. 
 
-![](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
+![**Figure 1.** Sample output from student handout. Coverage along the subsetted contig “chr4_group5” on chromosome 4 of D. pseudoobscura. 
+](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
 
 Additionally, students will generate an RScript that can be used to compute coverage along a contig. Below is a sample coverage.R script the students should have completed by end of exercise is provided below. Each step on the handout is labeled as comments. This code can be copied directly into an R console and run to test the exercise and expected outputs. The first step must be replaced with the actual path to the provided input file on the student or instructor’s computer. See provided student handout for additional details.
 
