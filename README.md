@@ -29,7 +29,7 @@ Students will learn to use RStudio and R to read in the sample dataset, perform 
 
 ### Sample/Example: 
 
-As part of this exercise, students will output a PNG image file of their subsetted contig and customize it using the plot function in R. An example output is provided in Figure 1. This plot and the code used to generate it are provided in the handout review slides and sample code below. 
+As part of this exercise, students will output a PNG image file of their subsetted contig and customize it using the `plot` function in R. An example output is provided in **Figure 1**. This plot and the code used to generate it are provided in the handout review slides and sample code below. 
 
 ![](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Rplot.png)
 >**Figure 1.** Sample output from student handout. Coverage along the subsetted contig "chr4_group5" on chromosome 4 of *D. pseudoobscura*.
