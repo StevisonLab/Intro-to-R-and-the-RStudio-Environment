@@ -3,10 +3,10 @@
 
 If you are an ***instructor***, go [here](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Instructor_README.md).
 
-If you are a ***student***:
+If you are a ***student*** wishing to do this on your own:
 1. Follow these [installation instructions](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%201.%20Install%20R%20and%20RStudio%20Instruction.docx) for R and RStudio. 
-2. Then, download the [R Studio Handout](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) to get started. 
-3. Though not required, feel free to use the accompanying [Slides for Intro to R Studio & Handout Review](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix_2_Instructor_Slides.html).
+2. Then, download the [R Studio Handout](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) to get started. This exercise should take between 30 minutes to 1.5 hours.
+3. Though not required, feel free to use the accompanying [Slides for an Intro to R Studio & a Handout Review following the exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix_2_Instructor_Slides.html).
 
 ### Synopsis:
 This [laboratory exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) is provided to introduce intermediate undergraduate students to [R](https://www.r-project.org/) and the [RStudio](https://www.rstudio.com/) environment. Abosultely NO background in R or RStudio is required! At the end of this exercise, students should be able to:
