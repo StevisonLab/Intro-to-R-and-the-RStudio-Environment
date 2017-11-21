@@ -10,8 +10,12 @@ This [laboratory exercise](https://github.com/StevisonLab/Intro-to-R-and-the-RSt
 
 Students will also learn the importance of **reproducibility in bioinformatics research** and make a script that they can use afterwards. This resource includes a handout for students and accompanying slides for the instructor to use to preface the handout and to go over the handout after the lab activity.
 
-If you are an instructor, go [here](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Instructor_README.md).
-If you are a student, follow these [installation instructions](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%201.%20Install%20R%20and%20RStudio%20Instruction.docx) for R and RStudio. Then, download the [R Studio Handout](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) to get started. Though not required, feel free to use the accompanying [Slides for Intro to R Studio & Handout Review](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix_2_Instructor_Slides.html).
+If you are an ***instructor***, go [here](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Instructor_README.md).
+
+If you are a ***student***:
+1. Follow these [installation instructions](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%201.%20Install%20R%20and%20RStudio%20Instruction.docx) for R and RStudio. 
+2. Then, download the [R Studio Handout](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix%203.%20Working%20in%20R%20Studio%20Handout.pdf) to get started. 
+3. Though not required, feel free to use the accompanying [Slides for Intro to R Studio & Handout Review](https://github.com/StevisonLab/Intro-to-R-and-the-RStudio-Environment/blob/master/Appendix_2_Instructor_Slides.html).
 
 
 ### Introduction: 
